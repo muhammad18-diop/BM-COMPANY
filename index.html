@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="color-sheme" content="light">
-    <title>BM COMPANY - Accueil</title>
+    <title>BM Company | Communication Visuelle, Design & Impression au Sénégal</title>
     <link rel="stylesheet" href="./dist/output.css">
     <link rel="shortcut icon" href="image/bmcompany.jpeg" type="image/x-icon">
 <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
@@ -698,23 +698,46 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
       <p class="mb-8 lg:mb-16 font-light text-center text-gray-500 dark:text-black-400 sm:text-xl">
         Vous avez un projet d'impression, besoin de textiles ou d'objets personnalisés, ou souhaitez créer votre identité visuelle ? Notre équipe est à votre disposition pour concrétiser vos idées. Remplissez le formulaire ci-dessous ou contactez-nous directement, nous vous répondrons dans les plus brefs délais.
       </p>
-      <form action="#" class="space-y-8">
+
+      
+      <form id="contact-form" action="https://formspree.io/f/xgawvlld" method="POST" class="space-y-8">
           <div>
               <label for="email" class="block mb-2 text-sm font-medium text-gray-900 dark:text-dark-300">Votre adresse email</label>
-              <input type="email" id="email" class="shadow-sm bg-white-50 border border-black-300 text-gray-900 text-base rounded-lg focus:outline-none focus:ring-2 focus:ring-slate-900 focus:border-slate-900 block w-full p-2.5 dark:bg-black-700 dark:border-black-600 dark:placeholder-black-400 dark:text-black dark:focus:ring-slate-900 dark:focus:border-slate-900 dark:shadow-sm-light" placeholder="exemple@domaine.com" required>
+              <input type="email" id="email" name="email" class="shadow-sm bg-white-50 border border-black-300 text-gray-900 text-base rounded-lg focus:outline-none focus:ring-2 focus:ring-slate-900 focus:border-slate-900 block w-full p-2.5 dark:bg-black-700 dark:border-black-600 dark:placeholder-black-400 dark:text-black dark:focus:ring-slate-900 dark:focus:border-slate-900 dark:shadow-sm-light" placeholder="exemple@domaine.com" required>
           </div>
           <div>
               <label for="sujet" class="block mb-2 text-sm font-medium text-gray-900 dark:text-dark-300">Sujet de votre demande</label>
-              <input type="text" id="sujet" class="shadow-sm bg-white-50 border border-black-300 text-gray-900 text-base rounded-lg focus:outline-none focus:ring-2 focus:ring-slate-900 focus:border-slate-900 block w-full p-2.5 dark:bg-black-700 dark:border-black-600 dark:placeholder-black-400 dark:text-black dark:focus:ring-slate-900 dark:focus:border-slate-900 dark:shadow-sm-light" placeholder="Ex: Devis t-shirts personnalisés, impression bâche, création de logo..." required>
+              <input type="text" id="sujet" name="sujet" class="shadow-sm bg-white-50 border border-black-300 text-gray-900 text-base rounded-lg focus:outline-none focus:ring-2 focus:ring-slate-900 focus:border-slate-900 block w-full p-2.5 dark:bg-black-700 dark:border-black-600 dark:placeholder-black-400 dark:text-black dark:focus:ring-slate-900 dark:focus:border-slate-900 dark:shadow-sm-light" placeholder="Ex: Devis t-shirts personnalisés, impression bâche, création de logo..." required>
           </div>
           <div class="sm:col-span-2">
               <label for="message" class="block mb-2 text-sm font-medium text-black-900 dark:text-black-400">Votre message ou détails du projet</label>
-              <textarea id="message" rows="6" class="block p-2.5 w-full text-base text-black-900 bg-black-50 rounded-lg shadow-sm border border-black-300 focus:outline-none focus:ring-2 focus:ring-slate-900 focus:border-slate-900 dark:bg-black-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-black dark:focus:ring-slate-900 dark:focus:border-slate-900" placeholder="Décrivez votre besoin (quantité, dimensions, type de support, délais désirés...)..."></textarea>
+              <textarea id="message" name="message" rows="6" class="block p-2.5 w-full text-base text-black-900 bg-black-50 rounded-lg shadow-sm border border-black-300 focus:outline-none focus:ring-2 focus:ring-slate-900 focus:border-slate-900 dark:bg-black-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-black dark:focus:ring-slate-900 dark:focus:border-slate-900" placeholder="Décrivez votre besoin (quantité, dimensions, type de support, délais désirés...)..." required></textarea>
           </div>
-          <button type="submit" class="py-3 px-5 text-sm font-medium text-center text-white rounded-lg bg-slate-900 sm:w-fit hover:bg-slate-800 focus:ring-4 focus:outline-none focus:ring-slate-300 dark:bg-slate-900 dark:hover:bg-slate-800 dark:focus:ring-slate-800">Envoyer la demande</button>
+          <button type="submit" id="submit-btn" class="py-3 px-5 text-sm font-medium text-center text-white rounded-lg bg-slate-900 sm:w-fit hover:bg-slate-800 focus:ring-4 focus:outline-none focus:ring-slate-300 dark:bg-slate-900 dark:hover:bg-slate-800 dark:focus:ring-slate-800">Envoyer la demande</button>
       </form>
   </div>
 </section>
+
+<!-- Modal Succès / Erreur sur fond bg-slate-900 -->
+<div id="modal-status" class="fixed inset-0 z-50 hidden flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm">
+  <div class="relative w-full max-w-md p-6 bg-slate-900 rounded-2xl shadow-2xl text-center text-white border border-slate-800 transform transition-all">
+    <!-- Icône dynamique -->
+    <div id="modal-icon" class="mx-auto mb-4 flex items-center justify-center w-12 h-12 rounded-full"></div>
+    
+    <!-- Titre et Message -->
+    <h3 id="modal-title" class="mb-2 text-xl font-bold"></h3>
+    <p id="modal-message" class="mb-6 text-sm text-slate-300"></p>
+    
+    <!-- Bouton de fermeture -->
+    <button id="modal-close-btn" type="button" class="w-full py-2.5 px-5 text-sm font-medium text-slate-900 bg-white rounded-lg hover:bg-slate-100 focus:ring-4 focus:outline-none focus:ring-slate-500 transition-colors">
+      Fermer
+    </button>
+  </div>
+</div>
+
+
+
+
 
 
 <footer class="p-4 bg-slate-900 md:p-8 lg:p-10 text-white">
@@ -753,6 +776,7 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
 
 
 
+<script src="script.js"></script>
 <script src="./node_modules/flowbite/dist/flowbite.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.js"></script>
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
