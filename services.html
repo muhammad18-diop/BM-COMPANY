@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
         <link rel="stylesheet" href="./dist/output.css">
+        <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script> 
     <link rel="shortcut icon" href="image/bmcompany.jpeg" type="image/x-icon">
 <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 <!-- Flowbite CSS -->
@@ -220,6 +221,272 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
   }
 
 </style>
+
+
+
+
+<!-- Section avec gestion d'état Alpine.js pour la modale -->
+<section id="catalogue" class="py-16 text-white" x-data="{ 
+    openModal: false, 
+    modalTitle: '', 
+    modalDesc: '', 
+    modalList: [],
+    showDetails(title, desc, list) {
+        this.modalTitle = title;
+        this.modalDesc = desc;
+        this.modalList = list;
+        this.openModal = true;
+    }
+}">
+    <div class="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <!-- En-tête de section -->
+        <div class="text-center max-w-3xl mx-auto mb-16">
+            <h2 class="text-xs font-semibold text-primary-400 uppercase tracking-widest mb-2">Savoir-faire & Expertise</h2>
+            <p class="text-3xl font-extrabold sm:text-4xl text-gray-900">Nos Services d'Excellence</p>
+            <p class="mt-4 text-gray-900 text-base sm:text-lg">
+                Découvrez l'ensemble des solutions sur-mesure conçues pour développer votre entreprise et sublimer votre marque.
+            </p>
+        </div>
+
+        <!-- Grille des services -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            
+            <!-- Carte 1 : Web & Digital -->
+            <div class="bg-slate-800 border border-slate-700 rounded-2xl p-6 transition-all duration-300 hover:border-primary-500 hover:shadow-lg hover:shadow-primary-500/10 hover:-translate-y-1 flex flex-col justify-between">
+                <div>
+                    <div class="w-12 h-12 rounded-xl bg-primary-600/20 text-primary-400 flex items-center justify-center mb-6">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 6.75 22.5 12l-5.25 5.25m-10.5 0L1.5 12l5.25-5.25m7.5-3-4.5 16.5" />
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-white">Solutions Web & Digitales</h3>
+                    <p class="text-slate-300 text-sm leading-relaxed mb-6">
+                        Conception de sites vitrines, boutiques e-commerce performantes et applications web adaptées à vos besoins stratégiques.
+                    </p>
+                </div>
+                <div>
+                    <ul class="text-xs text-slate-300 space-y-2 border-t border-slate-700 pt-4 mb-6">
+                        <li class="flex items-center"><span class="w-1.5 h-1.5 rounded-full bg-primary-400 mr-2"></span>Sites Vitrines & E-commerce</li>
+                        <li class="flex items-center"><span class="w-1.5 h-1.5 rounded-full bg-primary-400 mr-2"></span>Optimisation SEO & Performance</li>
+                    </ul>
+                    <button @click="showDetails(
+                        'Solutions Web & Digitales', 
+                        'Nous créons des plateformes web sur-mesure, ultra-rapides et optimisées pour la conversion. Du site vitrine à la boutique en ligne complexe, chaque projet bénéficie d\'une architecture moderne et sécurisée.',
+                        ['Développement sur-mesure (React, Tailwind, Node)', 'Boutiques e-commerce (Shopify, WooCommerce)', 'Optimisation SEO & Référencement naturel', 'Maintenance & Hébergement sécurisé']
+                    )" class="w-full py-2.5 px-4 text-xs font-semibold text-primary-400 bg-primary-500/10 hover:bg-primary-500 hover:text-white rounded-xl border border-primary-500/30 transition-all duration-200 flex items-center justify-center gap-2">
+                        <span>Voir les détails</span>
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Carte 2 : Design Graphique -->
+            <div class="bg-slate-800 border border-slate-700 rounded-2xl p-6 transition-all duration-300 hover:border-primary-500 hover:shadow-lg hover:shadow-primary-500/10 hover:-translate-y-1 flex flex-col justify-between">
+                <div>
+                    <div class="w-12 h-12 rounded-xl bg-primary-600/20 text-primary-400 flex items-center justify-center mb-6">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M9.53 16.122a3 3 0 0 0-5.78 1.128 2.25 2.25 0 0 0 2.4 2.245 4.5 4.5 0 0 0 8.4-2.245c0-.399-.078-.78-.22-1.128m0 0a15.998 15.998 0 0 0 3.388-1.62m-5.01 2.748 1.17-1.17m0 0 1.17 1.17m-1.17-1.17V12.75" />
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-white">Design & Identité Visuelle</h3>
+                    <p class="text-slate-300 text-sm leading-relaxed mb-6">
+                        Création d'identités de marque percutantes : logos, charte graphique, visuels pour réseaux sociaux et supports.
+                    </p>
+                </div>
+                <div>
+                    <ul class="text-xs text-slate-300 space-y-2 border-t border-slate-700 pt-4 mb-6">
+                        <li class="flex items-center"><span class="w-1.5 h-1.5 rounded-full bg-primary-400 mr-2"></span>Logos & Branding complet</li>
+                        <li class="flex items-center"><span class="w-1.5 h-1.5 rounded-full bg-primary-400 mr-2"></span>Supports Print & Digital</li>
+                    </ul>
+                    <button @click="showDetails(
+                        'Design & Identité Visuelle', 
+                        'Donnez une image forte et mémorable à votre entreprise. Notre équipe de designers conçoit des identités visuelles uniques qui captent l\'attention et transmettent vos valeurs.',
+                        ['Conception de Logo vectoriel & Charte graphique', 'Design de cartes de visite & papeterie', 'Templates et visuels pour réseaux sociaux', 'Brochures, dépliants et catalogues']
+                    )" class="w-full py-2.5 px-4 text-xs font-semibold text-primary-400 bg-primary-500/10 hover:bg-primary-500 hover:text-white rounded-xl border border-primary-500/30 transition-all duration-200 flex items-center justify-center gap-2">
+                        <span>Voir les détails</span>
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Carte 3 : Impression Grand Format -->
+            <div class="bg-slate-800 border border-slate-700 rounded-2xl p-6 transition-all duration-300 hover:border-primary-500 hover:shadow-lg hover:shadow-primary-500/10 hover:-translate-y-1 flex flex-col justify-between">
+                <div>
+                    <div class="w-12 h-12 rounded-xl bg-primary-600/20 text-primary-400 flex items-center justify-center mb-6">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M6.72 13.829c-.24.03-.48.062-.72.096m.72-.096a42.415 42.415 0 0 1 10.56 0m-10.56 0L6.34 18m10.94-4.171c.24.03.48.062.72.096m-.72-.096L17.66 18m0 0 .229 2.523a1.125 1.125 0 0 1-1.12 1.227H7.231c-.662 0-1.18-.568-1.12-1.227L6.34 18m11.318 0h1.091A2.25 2.25 0 0 0 21 15.75V9.456c0-1.081-.768-2.015-1.837-2.175a48.055 48.055 0 0 0-1.913-.247M6.34 18H5.25A2.25 2.25 0 0 1 3 15.75V9.456c0-1.081.768-2.015 1.837-2.175a48.041 48.041 0 0 1 1.913-.247m10.5 0a48.536 48.536 0 0 0-10.5 0m10.5 0V3.375c0-.621-.504-1.125-1.125-1.125h-8.25c-.621 0-1.125.504-1.125 1.125v3.656h10.5Z" />
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-white">Impression Tous Supports</h3>
+                    <p class="text-slate-300 text-sm leading-relaxed mb-6">
+                        Impression haute définition sur une variété de supports : bannières, bâches, cartes de visite, dépliants.
+                    </p>
+                </div>
+                <div>
+                    <ul class="text-xs text-slate-300 space-y-2 border-t border-slate-700 pt-4 mb-6">
+                        <li class="flex items-center"><span class="w-1.5 h-1.5 rounded-full bg-primary-400 mr-2"></span>Bâches & Bannières XXL</li>
+                        <li class="flex items-center"><span class="w-1.5 h-1.5 rounded-full bg-primary-400 mr-2"></span>Papeterie Professionnelle</li>
+                    </ul>
+                    <button @click="showDetails(
+                        'Impression Tous Supports', 
+                        'Profitez d\'une qualité d\'impression irréprochable avec des couleurs éclatantes et des finitions soignées pour l\'ensemble de vos éléments de communication physique.',
+                        ['Bâches publicitaires, microperforées et Roll-up', 'Affiches grand format & Panneaux rigides', 'Cartes de visite avec finitions dorure/vernis', 'Flyers, dépliants et brochures événementielles']
+                    )" class="w-full py-2.5 px-4 text-xs font-semibold text-primary-400 bg-primary-500/10 hover:bg-primary-500 hover:text-white rounded-xl border border-primary-500/30 transition-all duration-200 flex items-center justify-center gap-2">
+                        <span>Voir les détails</span>
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Carte 4 : Textile Personnalisé -->
+            <div class="bg-slate-800 border border-slate-700 rounded-2xl p-6 transition-all duration-300 hover:border-primary-500 hover:shadow-lg hover:shadow-primary-500/10 hover:-translate-y-1 flex flex-col justify-between">
+                <div>
+                    <div class="w-12 h-12 rounded-xl bg-primary-600/20 text-primary-400 flex items-center justify-center mb-6">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 6a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0ZM4.501 20.118a7.5 7.5 0 0 1 14.998 0A17.933 17.933 0 0 1 12 21.75c-2.676 0-5.216-.584-7.499-1.632Z" />
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-white">Textile & T-Shirts</h3>
+                    <p class="text-slate-300 text-sm leading-relaxed mb-6">
+                        Personnalisation textile pour entreprises, événements et marques d'habillement : sérigraphie, DTF et broderie.
+                    </p>
+                </div>
+                <div>
+                    <ul class="text-xs text-slate-300 space-y-2 border-t border-slate-700 pt-4 mb-6">
+                        <li class="flex items-center"><span class="w-1.5 h-1.5 rounded-full bg-primary-400 mr-2"></span>T-shirts, Sweats, Casquettes</li>
+                        <li class="flex items-center"><span class="w-1.5 h-1.5 rounded-full bg-primary-400 mr-2"></span>Impressions DTF & Flocage</li>
+                    </ul>
+                    <button @click="showDetails(
+                        'Textile & T-Shirts Personnalisés', 
+                        'Habillez vos équipes ou créez votre propre marque de vêtements grâce à nos techniques d\'impression textile haute durabilité.',
+                        ['Impression DTF (Direct to Film) haute définition', 'Broderie personnalisée durable', 'Sérigraphie pour moyennes et grandes séries', 'Polos, T-shirts, Sweats à capuche & Casquettes']
+                    )" class="w-full py-2.5 px-4 text-xs font-semibold text-primary-400 bg-primary-500/10 hover:bg-primary-500 hover:text-white rounded-xl border border-primary-500/30 transition-all duration-200 flex items-center justify-center gap-2">
+                        <span>Voir les détails</span>
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Carte 5 : Objets & Mugs -->
+            <div class="bg-slate-800 border border-slate-700 rounded-2xl p-6 transition-all duration-300 hover:border-primary-500 hover:shadow-lg hover:shadow-primary-500/10 hover:-translate-y-1 flex flex-col justify-between">
+                <div>
+                    <div class="w-12 h-12 rounded-xl bg-primary-600/20 text-primary-400 flex items-center justify-center mb-6">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M21 11.25v8.25a1.5 1.5 0 0 1-1.5 1.5H5.25A1.5 1.5 0 0 1 3 19.5v-8.25M21 11.25a3 3 0 0 0-3-3H6a3 3 0 0 0-3 3m18 0h-3v-1.5a1.5 1.5 0 0 0-1.5-1.5H10.5A1.5 1.5 0 0 0 9 8.25V11.25H3" />
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-white">Objets Publicitaires</h3>
+                    <p class="text-slate-300 text-sm leading-relaxed mb-6">
+                        Personnalisation de Goodies et objets promotionnels : mugs, gourdes, stylos et accessoires personnalisés.
+                    </p>
+                </div>
+                <div>
+                    <ul class="text-xs text-slate-300 space-y-2 border-t border-slate-700 pt-4 mb-6">
+                        <li class="flex items-center"><span class="w-1.5 h-1.5 rounded-full bg-primary-400 mr-2"></span>Mugs & Gourdes Sublimation</li>
+                        <li class="flex items-center"><span class="w-1.5 h-1.5 rounded-full bg-primary-400 mr-2"></span>Goodies Événementiels</li>
+                    </ul>
+                    <button @click="showDetails(
+                        'Objets Publicitaires & Goodies', 
+                        'Fidélisez vos clients et renforcez votre image de marque avec des objets promotionnels personnalisés du quotidien.',
+                        ['Mugs en céramique & Thermos en inox', 'Stylos, Carnets et accessoires de bureau', 'Gourdes Isothermes & Tote bags', 'Clés USB, Pins & Porte-clés sur-mesure']
+                    )" class="w-full py-2.5 px-4 text-xs font-semibold text-primary-400 bg-primary-500/10 hover:bg-primary-500 hover:text-white rounded-xl border border-primary-500/30 transition-all duration-200 flex items-center justify-center gap-2">
+                        <span>Voir les détails</span>
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Carte 6 : Cadres & Déco -->
+            <div class="bg-slate-800 border border-slate-700 rounded-2xl p-6 transition-all duration-300 hover:border-primary-500 hover:shadow-lg hover:shadow-primary-500/10 hover:-translate-y-1 flex flex-col justify-between">
+                <div>
+                    <div class="w-12 h-12 rounded-xl bg-primary-600/20 text-primary-400 flex items-center justify-center mb-6">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="m2.25 15.75 5.159-5.159a2.25 2.25 0 0 1 3.182 0l5.159 5.159m-1.5-1.5 1.409-1.409a2.25 2.25 0 0 1 3.182 0l2.909 2.909m-18 3.75h16.5a1.5 1.5 0 0 0 1.5-1.5V6a1.5 1.5 0 0 0-1.5-1.5H3.75A1.5 1.5 0 0 0 2.25 6v12a1.5 1.5 0 0 0 1.5 1.5Zm10.5-11.25h.008v.008h-.008V8.25Zm.375 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Z" />
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-white">Cadres & Déco Premium</h3>
+                    <p class="text-slate-300 text-sm leading-relaxed mb-6">
+                        Conception de tableaux décoratifs, cadres photo haut de gamme et impressions artistiques pour bureaux et intérieurs.
+                    </p>
+                </div>
+                <div>
+                    <ul class="text-xs text-slate-300 space-y-2 border-t border-slate-700 pt-4 mb-6">
+                        <li class="flex items-center"><span class="w-1.5 h-1.5 rounded-full bg-primary-400 mr-2"></span>Tableaux Toile Canvas</li>
+                        <li class="flex items-center"><span class="w-1.5 h-1.5 rounded-full bg-primary-400 mr-2"></span>Cadres Photo & Encadrement</li>
+                    </ul>
+                    <button @click="showDetails(
+                        'Cadres & Déco Premium', 
+                        'Sublimez vos locaux professionnels ou votre intérieur avec nos impressions décoratives d\'art sur toile et nos cadres sur-mesure.',
+                        ['Impression sur toile Canvas tendue sur châssis', 'Cadres en bois & alu sur-mesure', 'Plaques Plexiglas & Aluminium Dibond', 'Décoration murale personnalisée']
+                    )" class="w-full py-2.5 px-4 text-xs font-semibold text-primary-400 bg-primary-500/10 hover:bg-primary-500 hover:text-white rounded-xl border border-primary-500/30 transition-all duration-200 flex items-center justify-center gap-2">
+                        <span>Voir les détails</span>
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+                    </button>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Appel à l'action bas de section -->
+        <div class="mt-16 text-center">
+            <a href="https://wa.me/221772484637" target="_blank" class="inline-flex items-center justify-center px-6 py-3.5 text-sm font-medium text-white bg-slate-800 rounded-lg hover:bg-primary-700 transition-colors shadow-lg">
+                Vous avez un projet spécifique ? Contactez-nous sur WhatsApp
+            </a>
+        </div>
+
+    </div>
+
+    <!-- MODAL DYNAMIQUE -->
+    <div x-show="openModal" 
+         x-transition:enter="transition ease-out duration-300"
+         x-transition:enter-start="opacity-0"
+         x-transition:enter-end="opacity-100"
+         x-transition:leave="transition ease-in duration-200"
+         x-transition:leave-start="opacity-100"
+         x-transition:leave-end="opacity-0"
+         class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/70 backdrop-blur-sm" 
+         style="display: none;">
+        
+        <div @click.away="openModal = false" 
+             class="bg-slate-800 border border-slate-700 rounded-2xl p-6 sm:p-8 max-w-lg w-full shadow-2xl relative">
+            
+            <!-- Bouton fermer -->
+            <button @click="openModal = false" class="absolute top-4 right-4 text-slate-400 hover:text-white p-2">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+            </button>
+
+            <!-- Titre Modale -->
+            <h3 class="text-2xl font-bold text-white mb-4" x-text="modalTitle"></h3>
+            
+            <!-- Description -->
+            <p class="text-slate-300 text-sm leading-relaxed mb-6" x-text="modalDesc"></p>
+
+            <!-- Liste des prestations -->
+            <div class="mb-6">
+                <h4 class="text-xs font-semibold text-primary-400 uppercase tracking-widest mb-3">Prestations incluses :</h4>
+                <ul class="space-y-2">
+                    <template x-for="item in modalList" :key="item">
+                        <li class="flex items-start text-sm text-slate-200">
+                            <svg class="w-4 h-4 text-primary-400 mr-2 mt-0.5 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                            <span x-text="item"></span>
+                        </li>
+                    </template>
+                </ul>
+            </div>
+
+            <!-- Actions Modale -->
+            <div class="flex gap-3 pt-4 border-t border-slate-700">
+                <a href="https://wa.me/221772484637" target="_blank" class="flex-1 py-3 text-center text-sm font-semibold text-white bg-primary-600 hover:bg-primary-700 rounded-xl transition-colors">
+                    Demander un devis
+                </a>
+                <button @click="openModal = false" class="px-5 py-3 text-sm font-semibold text-slate-300 hover:text-white bg-slate-700/50 hover:bg-slate-700 rounded-xl transition-colors">
+                    Fermer
+                </button>
+            </div>
+        </div>
+    </div>
+</section>
 
 
 
