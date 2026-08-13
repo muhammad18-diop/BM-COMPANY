@@ -171,16 +171,22 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
     
 
 
-<nav class="bg-slate-800 fixed w-full z-20 top-0 start-0 border-b border-default">
-  <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
-    <a href="#" class="flex items-center space-x-3 rtl:space-x-reverse">
-        <img src="image/logo bm.png" class="h-7" alt="Logo BM Company" />
-        <span class="self-center text-xl text-heading font-semibold text-gray-200 whitespace-nowrap">BM COMPANY</span>
+<nav class="bg-slate-800 fixed w-full z-20 top-0 start-0 border-b border-default box-border">
+  <div class="max-w-screen-xl flex items-center justify-between mx-auto p-3 sm:p-4">
+    
+    <!-- Brand / Logo -->
+    <a href="#" class="flex items-center space-x-2 sm:space-x-3 rtl:space-x-reverse min-w-0 pr-2">
+        <img src="image/logo bm.png" class="h-6 sm:h-7 shrink-0" alt="Logo BM Company" />
+        <span class="self-center text-lg sm:text-xl text-heading font-semibold text-gray-200 truncate">BM COMPANY</span>
     </a>
-    <button data-collapse-toggle="navbar-default" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-white rounded-base md:hidden hover:bg-neutral-secondary-soft hover:text-heading focus:outline-none focus:ring-2 focus:ring-neutral-tertiary" aria-controls="navbar-default" aria-expanded="false">
+
+    <!-- Bouton Burger -->
+    <button data-collapse-toggle="navbar-default" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-white rounded-base md:hidden hover:bg-neutral-secondary-soft hover:text-heading focus:outline-none focus:ring-2 focus:ring-neutral-tertiary shrink-0" aria-controls="navbar-default" aria-expanded="false">
         <span class="sr-only">Open main menu</span>
         <svg class="w-6 h-6" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-width="2" d="M5 7h14M5 12h14M5 17h14"/></svg>
     </button>
+
+    <!-- Menu Déroulant -->
     <div class="hidden w-full md:block md:w-auto" id="navbar-default">
       <ul class="font-medium flex flex-col p-4 md:p-0 mt-4 border border-default rounded-base bg-neutral-secondary-soft md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 md:bg-neutral-primary">
         <li>
@@ -203,6 +209,7 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
         </li>
       </ul>
     </div>
+
   </div>
 </nav>
 
