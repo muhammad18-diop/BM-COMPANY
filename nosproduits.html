@@ -348,6 +348,7 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
 </style>
 
 
+
 <section id="catalogue-produits" class="py-16 bg-gray-50 border-t border-gray-200">
     <div class="max-w-screen-xl px-4 mx-auto lg:px-12">
         
@@ -362,8 +363,8 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
         </div>
 
         <!-- Filtres par catégories -->
-        <div class="flex flex-wrap justify-center gap-2 mb-10">
-            <button data-filter="all" class="filter-btn px-4 py-2 bg-slate-800 text-white text-sm font-medium rounded-full border border-gray-200 hover:bg-slate-900 transition-colors shadow-sm">
+        <div class="flex flex-wrap justify-center gap-2 mb-10" id="filter-buttons">
+            <button data-filter="all" class="filter-btn active-btn px-4 py-2 bg-slate-800 text-white text-sm font-medium rounded-full border border-gray-200 hover:bg-slate-900 transition-colors shadow-sm">
                 Tous les produits
             </button>
             <button data-filter="p1" class="filter-btn px-4 py-2 bg-white text-slate-700 text-sm font-medium rounded-full border border-gray-200 hover:bg-slate-800 hover:text-white transition-colors shadow-sm">
@@ -387,444 +388,96 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
         </div>
 
         <!-- Grille des produits -->
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-            
-            <!-- Produit 1 : PVC Murale Grandes Dimensions -->
-            <div data-category="p1" class="product-card bg-white rounded-2xl border border-gray-200 shadow-sm overflow-hidden flex flex-col hover:shadow-md transition-all duration-300" data-aos="zoom-out-left">
-                <div class="relative h-56 bg-gray-100">
-                    <img src="MEDIAS/11111111111.jpeg" alt="Tableau PVC Murale" class="w-full h-full object-cover">
-                    <span class="absolute top-4 left-4 bg-slate-800 text-white text-xs font-semibold px-3 py-1 rounded-full">
-                        PVC Murale
-                    </span>
-                </div>
-                <div class="p-6 flex flex-col flex-grow">
-                    <div class="flex justify-between items-start mb-2">
-                        <h3 class="text-xl font-bold text-slate-800">Tableau PVC Grand Format</h3>
-                        <span class="text-lg font-extrabold text-slate-800 whitespace-nowrap ml-2">50 000 FCFA</span>
-                    </div>
-                    <p class="text-gray-600 text-sm mb-6 flex-grow">
-                        Finition haute définition sur PVC résistant. Dimension grand format : 2m / 1m20.
-                    </p>
-                    <a href="https://wa.me/221772484637?text=Bonjour%20BM%20COMPANY,%20je%20souhaite%20commander%20:%20Tableau%20PVC%202m/1m20%20(50%20000%20FCFA)" 
-                       target="_blank" 
-                       class="w-full inline-flex justify-center items-center py-3 px-5 text-sm font-semibold text-white rounded-lg bg-slate-800 hover:bg-slate-900 focus:ring-4 focus:ring-slate-300 transition-colors shadow-sm">
-                        <svg class="w-5 h-5 mr-2 fill-current" viewBox="0 0 24 24">
-                            <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/>
-                        </svg>
-                        Commander via WhatsApp
-                    </a>
-                </div>
-            </div>
-
-            <!-- Produit 2 : Tableau en Verre A1 -->
-            <div data-category="p2" class="product-card bg-white rounded-2xl border border-gray-200 shadow-sm overflow-hidden flex flex-col hover:shadow-md transition-all duration-300" data-aos="zoom-out-left">
-                <div class="relative h-56 bg-gray-100">
-                    <img src="MEDIAS/a1 rouge.jpeg" alt="Tableau en Verre A1" class="w-full h-full object-cover">
-                    <span class="absolute top-4 left-4 bg-slate-800 text-white text-xs font-semibold px-3 py-1 rounded-full">
-                        Verre
-                    </span>
-                </div>
-                <div class="p-6 flex flex-col flex-grow">
-                    <div class="flex justify-between items-start mb-2">
-                        <h3 class="text-xl font-bold text-slate-800">Tableau en Verre A1</h3>
-                        <span class="text-lg font-extrabold text-slate-800 whitespace-nowrap ml-2">18 000 FCFA</span>
-                    </div>
-                    <p class="text-gray-600 text-sm mb-6 flex-grow">
-                        Impression ultra-brillante sous verre avec rendu premium. Format A1.
-                    </p>
-                    <a href="https://wa.me/221772484637?text=Bonjour%20BM%20COMPANY,%20je%20souhaite%20commander%20:%20Tableau%20en%20Verre%20Format%20A1%20(18%20000%20FCFA)" 
-                       target="_blank" 
-                       class="w-full inline-flex justify-center items-center py-3 px-5 text-sm font-semibold text-white rounded-lg bg-slate-800 hover:bg-slate-900 focus:ring-4 focus:ring-slate-300 transition-colors shadow-sm">
-                        <svg class="w-5 h-5 mr-2 fill-current" viewBox="0 0 24 24">
-                            <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/>
-                        </svg>
-                        Commander via WhatsApp
-                    </a>
-                </div>
-            </div>
- <div data-category="p1" class="product-card bg-white rounded-2xl border border-gray-200 shadow-sm overflow-hidden flex flex-col hover:shadow-md transition-all duration-300" data-aos="zoom-out-left">
-                <div class="relative h-56 bg-gray-100">
-                    <img src="MEDIAS/Dimension1m20/1m.jpeg" alt="Tableau PVC Murale" class="w-full h-full object-cover">
-                    <span class="absolute top-4 left-4 bg-slate-800 text-white text-xs font-semibold px-3 py-1 rounded-full">
-                        PVC Murale
-                    </span>
-                </div>
-                <div class="p-6 flex flex-col flex-grow">
-                    <div class="flex justify-between items-start mb-2">
-                        <h3 class="text-xl font-bold text-slate-800">Dimension 1m20</h3>
-                        <span class="text-lg font-extrabold text-slate-800 whitespace-nowrap ml-2">50 000 FCFA</span>
-                    </div>
-                    <p class="text-gray-600 text-sm mb-6 flex-grow">
-                        Finition haute définition sur PVC résistant. Dimension grand format : 2m / 1m20.
-                    </p>
-                    <a href="https://wa.me/221772484637?text=Bonjour%20BM%20COMPANY,%20je%20souhaite%20commander%20:%20Tableau%20PVC%202m/1m20%20(50%20000%20FCFA)" 
-                       target="_blank" 
-                       class="w-full inline-flex justify-center items-center py-3 px-5 text-sm font-semibold text-white rounded-lg bg-slate-800 hover:bg-slate-900 focus:ring-4 focus:ring-slate-300 transition-colors shadow-sm">
-                        <svg class="w-5 h-5 mr-2 fill-current" viewBox="0 0 24 24">
-                            <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/>
-                        </svg>
-                        Commander via WhatsApp
-                    </a>
-                </div>
-            </div>
-
-             <div data-category="p1" class="product-card bg-white rounded-2xl border border-gray-200 shadow-sm overflow-hidden flex flex-col hover:shadow-md transition-all duration-300" data-aos="zoom-out-left">
-                <div class="relative h-56 bg-gray-100">
-                    <img src="image/grand.jpeg" alt="Tableau PVC Murale" class="w-full h-full object-cover">
-                    <span class="absolute top-4 left-4 bg-slate-800 text-white text-xs font-semibold px-3 py-1 rounded-full">
-                        PVC Murale
-                    </span>
-                </div>
-                <div class="p-6 flex flex-col flex-grow">
-                    <div class="flex justify-between items-start mb-2">
-                        <h3 class="text-xl font-bold text-slate-800">Tableau PVC Grand Format</h3>
-                        <span class="text-lg font-extrabold text-slate-800 whitespace-nowrap ml-2">50 000 FCFA</span>
-                    </div>
-                    <p class="text-gray-600 text-sm mb-6 flex-grow">
-                        Finition haute définition sur PVC résistant. Dimension grand format : 2m / 1m20.
-                    </p>
-                    <a href="https://wa.me/221772484637?text=Bonjour%20BM%20COMPANY,%20je%20souhaite%20commander%20:%20Tableau%20PVC%202m/1m20%20(50%20000%20FCFA)" 
-                       target="_blank" 
-                       class="w-full inline-flex justify-center items-center py-3 px-5 text-sm font-semibold text-white rounded-lg bg-slate-800 hover:bg-slate-900 focus:ring-4 focus:ring-slate-300 transition-colors shadow-sm">
-                        <svg class="w-5 h-5 mr-2 fill-current" viewBox="0 0 24 24">
-                            <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/>
-                        </svg>
-                        Commander via WhatsApp
-                    </a>
-                </div>
-            </div>
-            <!-- Produit 3 : Trophée & Diplôme -->
-            <div data-category="p3" class="product-card bg-white rounded-2xl border border-gray-200 shadow-sm overflow-hidden flex flex-col hover:shadow-md transition-all duration-300" data-aos="zoom-out-left">
-                <div class="relative h-56 bg-gray-100">
-                    <img src="MEDIAS/trophe.jpeg" alt="Trophée personnalisé" class="w-full h-full object-cover">
-                    <span class="absolute top-4 left-4 bg-slate-800 text-white text-xs font-semibold px-3 py-1 rounded-full">
-                        Reconnaissance
-                    </span>
-                </div>
-                <div class="p-6 flex flex-col flex-grow">
-                    <div class="flex justify-between items-start mb-2">
-                        <h3 class="text-xl font-bold text-slate-800">Trophée Personnalisé</h3>
-                        <span class="text-lg font-extrabold text-slate-800 whitespace-nowrap ml-2">15 000 FCFA</span>
-                    </div>
-                    <p class="text-gray-600 text-sm mb-6 flex-grow">
-                        Récompense de qualité supérieure gravée pour vos cérémonies et événements d'entreprise.
-                    </p>
-                    <a href="https://wa.me/221772484637?text=Bonjour%20BM%20COMPANY,%20je%20souhaite%20commander%20:%20Troph%C3%A9e%20Personnalis%C3%A9%20(15%20000%20FCFA)" 
-                       target="_blank" 
-                       class="w-full inline-flex justify-center items-center py-3 px-5 text-sm font-semibold text-white rounded-lg bg-slate-800 hover:bg-slate-900 focus:ring-4 focus:ring-slate-300 transition-colors shadow-sm">
-                        <svg class="w-5 h-5 mr-2 fill-current" viewBox="0 0 24 24">
-                            <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/>
-                        </svg>
-                        Commander via WhatsApp
-                    </a>
-                </div>
-            </div>
-
-            <div data-category="p3" class="product-card bg-white rounded-2xl border border-gray-200 shadow-sm overflow-hidden flex flex-col hover:shadow-md transition-all duration-300" data-aos="zoom-out-left">
-                <div class="relative h-56 bg-gray-100">
-                    <img src="image/image11.jpeg" alt="Trophée personnalisé" class="w-full h-full object-cover">
-                    <span class="absolute top-4 left-4 bg-slate-800 text-white text-xs font-semibold px-3 py-1 rounded-full">
-                        Reconnaissance
-                    </span>
-                </div>
-                <div class="p-6 flex flex-col flex-grow">
-                    <div class="flex justify-between items-start mb-2">
-                        <h3 class="text-xl font-bold text-slate-800">Trophée Personnalisé</h3>
-                        <span class="text-lg font-extrabold text-slate-800 whitespace-nowrap ml-2">15 000 FCFA</span>
-                    </div>
-                    <p class="text-gray-600 text-sm mb-6 flex-grow">
-                        Récompense de qualité supérieure gravée pour vos cérémonies et événements d'entreprise.
-                    </p>
-                    <a href="https://wa.me/221772484637?text=Bonjour%20BM%20COMPANY,%20je%20souhaite%20commander%20:%20Troph%C3%A9e%20Personnalis%C3%A9%20(15%20000%20FCFA)" 
-                       target="_blank" 
-                       class="w-full inline-flex justify-center items-center py-3 px-5 text-sm font-semibold text-white rounded-lg bg-slate-800 hover:bg-slate-900 focus:ring-4 focus:ring-slate-300 transition-colors shadow-sm">
-                        <svg class="w-5 h-5 mr-2 fill-current" viewBox="0 0 24 24">
-                            <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/>
-                        </svg>
-                        Commander via WhatsApp
-                    </a>
-                </div>
-            </div>
-
-            <div data-category="p2" class="product-card bg-white rounded-2xl border border-gray-200 shadow-sm overflow-hidden flex flex-col hover:shadow-md transition-all duration-300" data-aos="zoom-out-left">
-                <div class="relative h-56 bg-gray-100">
-                    <img src="image/verre2.jpeg" alt="Tableau en Verre A1" class="w-full h-full object-cover">
-                    <span class="absolute top-4 left-4 bg-slate-800 text-white text-xs font-semibold px-3 py-1 rounded-full">
-                        Verre
-                    </span>
-                </div>
-                <div class="p-6 flex flex-col flex-grow">
-                    <div class="flex justify-between items-start mb-2">
-                        <h3 class="text-xl font-bold text-slate-800">Tableau en Verre A1</h3>
-                        <span class="text-lg font-extrabold text-slate-800 whitespace-nowrap ml-2">18 000 FCFA</span>
-                    </div>
-                    <p class="text-gray-600 text-sm mb-6 flex-grow">
-                        Impression ultra-brillante sous verre avec rendu premium. Format A1.
-                    </p>
-                    <a href="https://wa.me/221772484637?text=Bonjour%20BM%20COMPANY,%20je%20souhaite%20commander%20:%20Tableau%20en%20Verre%20Format%20A1%20(18%20000%20FCFA)" 
-                       target="_blank" 
-                       class="w-full inline-flex justify-center items-center py-3 px-5 text-sm font-semibold text-white rounded-lg bg-slate-800 hover:bg-slate-900 focus:ring-4 focus:ring-slate-300 transition-colors shadow-sm">
-                        <svg class="w-5 h-5 mr-2 fill-current" viewBox="0 0 24 24">
-                            <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/>
-                        </svg>
-                        Commander via WhatsApp
-                    </a>
-                </div>
-            </div>
-
-            <div data-category="p2" class="product-card bg-white rounded-2xl border border-gray-200 shadow-sm overflow-hidden flex flex-col hover:shadow-md transition-all duration-300" data-aos="zoom-out-left">
-                <div class="relative h-56 bg-gray-100">
-                    <img src="MEDIAS/verre1.jpeg" alt="Tableau en Verre A1" class="w-full h-full object-cover">
-                    <span class="absolute top-4 left-4 bg-slate-800 text-white text-xs font-semibold px-3 py-1 rounded-full">
-                        Verre
-                    </span>
-                </div>
-                <div class="p-6 flex flex-col flex-grow">
-                    <div class="flex justify-between items-start mb-2">
-                        <h3 class="text-xl font-bold text-slate-800">Tableau en Verre </h3>
-                        <span class="text-lg font-extrabold text-slate-800 whitespace-nowrap ml-2">18 000 FCFA</span>
-                    </div>
-                    <p class="text-gray-600 text-sm mb-6 flex-grow">
-                        Impression ultra-brillante sous verre avec rendu premium.
-                    </p>
-                    <a href="https://wa.me/221772484637?text=Bonjour%20BM%20COMPANY,%20je%20souhaite%20commander%20:%20Tableau%20en%20Verre%20Format%20A1%20(18%20000%20FCFA)" 
-                       target="_blank" 
-                       class="w-full inline-flex justify-center items-center py-3 px-5 text-sm font-semibold text-white rounded-lg bg-slate-800 hover:bg-slate-900 focus:ring-4 focus:ring-slate-300 transition-colors shadow-sm">
-                        <svg class="w-5 h-5 mr-2 fill-current" viewBox="0 0 24 24">
-                            <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/>
-                        </svg>
-                        Commander via WhatsApp
-                    </a>
-                </div>
-            </div>
-
-            
-
-            <div data-category="p3" class="product-card bg-white rounded-2xl border border-gray-200 shadow-sm overflow-hidden flex flex-col hover:shadow-md transition-all duration-300" data-aos="zoom-out-left">
-                <div class="relative h-56 bg-gray-100">
-                    <img src="image/trophee1.jpeg" alt="Trophée personnalisé" class="w-full h-full object-cover">
-                    <span class="absolute top-4 left-4 bg-slate-800 text-white text-xs font-semibold px-3 py-1 rounded-full">
-                        Reconnaissance
-                    </span>
-                </div>
-                <div class="p-6 flex flex-col flex-grow">
-                    <div class="flex justify-between items-start mb-2">
-                        <h3 class="text-xl font-bold text-slate-800">Trophée Personnalisé</h3>
-                        <span class="text-lg font-extrabold text-slate-800 whitespace-nowrap ml-2">15 000 FCFA</span>
-                    </div>
-                    <p class="text-gray-600 text-sm mb-6 flex-grow">
-                        Récompense de qualité supérieure gravée pour vos cérémonies et événements d'entreprise.
-                    </p>
-                    <a href="https://wa.me/221772484637?text=Bonjour%20BM%20COMPANY,%20je%20souhaite%20commander%20:%20Troph%C3%A9e%20Personnalis%C3%A9%20(15%20000%20FCFA)" 
-                       target="_blank" 
-                       class="w-full inline-flex justify-center items-center py-3 px-5 text-sm font-semibold text-white rounded-lg bg-slate-800 hover:bg-slate-900 focus:ring-4 focus:ring-slate-300 transition-colors shadow-sm">
-                        <svg class="w-5 h-5 mr-2 fill-current" viewBox="0 0 24 24">
-                            <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/>
-                        </svg>
-                        Commander via WhatsApp
-                    </a>
-                </div>
-            </div>
-
-
-             <div data-category="p5" class="product-card bg-white rounded-2xl border border-gray-200 shadow-sm overflow-hidden flex flex-col hover:shadow-md transition-all duration-300" data-aos="zoom-out-left">
-                <div class="relative h-56 bg-gray-100">
-                    <img src="MEDIAS/tache acceuil.jpeg" alt="Pull Personnalisé" class="w-full h-full object-cover">
-                    <span class="absolute top-4 left-4 bg-slate-800 text-white text-xs font-semibold px-3 py-1 rounded-full">
-                        Textile
-                    </span>
-                </div>
-                <div class="p-6 flex flex-col flex-grow">
-                    <div class="flex justify-between items-start mb-2">
-                        <h3 class="text-xl font-bold text-slate-800">Tasses Personnalisées</h3>
-                        <span class="text-lg font-extrabold text-slate-800 whitespace-nowrap ml-2">12 000 FCFA</span>
-                    </div>
-                    <p class="text-gray-600 text-sm mb-6 flex-grow">
-                        Tasses sur-mesure selon votre style.
-                    </p>
-                    <a href="https://wa.me/221772484637?text=Bonjour%20BM%20COMPANY,%20je%20souhaite%20commander%20:%20Pull%20Personnalis%C3%A9%20(12%20000%20FCFA)" 
-                       target="_blank" 
-                       class="w-full inline-flex justify-center items-center py-3 px-5 text-sm font-semibold text-white rounded-lg bg-slate-800 hover:bg-slate-900 focus:ring-4 focus:ring-slate-300 transition-colors shadow-sm">
-                        <svg class="w-5 h-5 mr-2 fill-current" viewBox="0 0 24 24">
-                            <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/>
-                        </svg>
-                        Commander via WhatsApp
-                    </a>
-                </div>
-            </div>
-
-
-            <!-- Produit 4 : Tableau Double Face -->
-            <div data-category="p31" class="product-card bg-white rounded-2xl border border-gray-200 shadow-sm overflow-hidden flex flex-col hover:shadow-md transition-all duration-300" data-aos="zoom-out-left">
-                <div class="relative h-56 bg-black">
-                    <video autoplay muted loop class="w-full h-full object-cover">
-                        <source src="image/tableau 2face.mp4" type="video/mp4">
-                    </video>
-                    <span class="absolute top-4 left-4 bg-slate-800 text-white text-xs font-semibold px-3 py-1 rounded-full">
-                        Double Face
-                    </span>
-                </div>
-                <div class="p-6 flex flex-col flex-grow">
-                    <div class="flex justify-between items-start mb-2">
-                        <h3 class="text-xl font-bold text-slate-800">Tableau Double Face</h3>
-                        <span class="text-lg font-extrabold text-slate-800 whitespace-nowrap ml-2">9 000 FCFA</span>
-                    </div>
-                    <p class="text-gray-600 text-sm mb-6 flex-grow">
-                        Visuel rotatif recto-verso. Idéal pour présenter deux créations en une.
-                    </p>
-                    <a href="https://wa.me/221772484637?text=Bonjour%20BM%20COMPANY,%20je%20souhaite%20commander%20:%20Tableau%20Double%20Face%20(9%20000%20FCFA)" 
-                       target="_blank" 
-                       class="w-full inline-flex justify-center items-center py-3 px-5 text-sm font-semibold text-white rounded-lg bg-slate-800 hover:bg-slate-900 focus:ring-4 focus:ring-slate-300 transition-colors shadow-sm">
-                        <svg class="w-5 h-5 mr-2 fill-current" viewBox="0 0 24 24">
-                            <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/>
-                        </svg>
-                        Commander via WhatsApp
-                    </a>
-                </div>
-            </div>
-
-            <div data-category="p5" class="product-card bg-white rounded-2xl border border-gray-200 shadow-sm overflow-hidden flex flex-col hover:shadow-md transition-all duration-300" data-aos="zoom-out-left">
-                <div class="relative h-56 bg-gray-100">
-                    <img src="MEDIAS/tapis perso.jpeg" alt="Pull Personnalisé" class="w-full h-full object-cover">
-                    <span class="absolute top-4 left-4 bg-slate-800 text-white text-xs font-semibold px-3 py-1 rounded-full">
-                        Textile
-                    </span>
-                </div>
-                <div class="p-6 flex flex-col flex-grow">
-                    <div class="flex justify-between items-start mb-2">
-                        <h3 class="text-xl font-bold text-slate-800">Tapis Personnalisé</h3>
-                        <span class="text-lg font-extrabold text-slate-800 whitespace-nowrap ml-2">12 000 FCFA</span>
-                    </div>
-                    <p class="text-gray-600 text-sm mb-6 flex-grow">
-                        Tapis imprimé ou brodé sur-mesure selon votre style.
-                    </p>
-                    <a href="https://wa.me/221772484637?text=Bonjour%20BM%20COMPANY,%20je%20souhaite%20commander%20:%20Pull%20Personnalis%C3%A9%20(12%20000%20FCFA)" 
-                       target="_blank" 
-                       class="w-full inline-flex justify-center items-center py-3 px-5 text-sm font-semibold text-white rounded-lg bg-slate-800 hover:bg-slate-900 focus:ring-4 focus:ring-slate-300 transition-colors shadow-sm">
-                        <svg class="w-5 h-5 mr-2 fill-current" viewBox="0 0 24 24">
-                            <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/>
-                        </svg>
-                        Commander via WhatsApp
-                    </a>
-                </div>
-            </div>
-
-            <!-- Produit 5 : Coque Téléphone -->
-            <div data-category="p41" class="product-card bg-white rounded-2xl border border-gray-200 shadow-sm overflow-hidden flex flex-col hover:shadow-md transition-all duration-300" data-aos="zoom-out-left">
-                <div class="relative h-56 bg-gray-100">
-                    <img src="MEDIAS/22.jpeg" alt="Coque de téléphone personnalisée" class="w-full h-full object-cover">
-                    <span class="absolute top-4 left-4 bg-slate-800 text-white text-xs font-semibold px-3 py-1 rounded-full">
-                        Coque
-                    </span>
-                </div>
-                <div class="p-6 flex flex-col flex-grow">
-                    <div class="flex justify-between items-start mb-2">
-                        <h3 class="text-xl font-bold text-slate-800">Coque de Téléphone</h3>
-                        <span class="text-lg font-extrabold text-slate-800 whitespace-nowrap ml-2">5 000 FCFA</span>
-                    </div>
-                    <p class="text-gray-600 text-sm mb-6 flex-grow">
-                        Protection personnalisée avec vos photos, prénom ou designs sur-mesure. Tous modèles disponibles.
-                    </p>
-                    <a href="https://wa.me/221772484637?text=Bonjour%20BM%20COMPANY,%20je%20souhaite%20commander%20:%20Coque%20de%20T%C3%A9l%C3%A9phone%20Personnalis%C3%A9e%20(5%20000%20FCFA)" 
-                       target="_blank" 
-                       class="w-full inline-flex justify-center items-center py-3 px-5 text-sm font-semibold text-white rounded-lg bg-slate-800 hover:bg-slate-900 focus:ring-4 focus:ring-slate-300 transition-colors shadow-sm">
-                        <svg class="w-5 h-5 mr-2 fill-current" viewBox="0 0 24 24">
-                            <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/>
-                        </svg>
-                        Commander via WhatsApp
-                    </a>
-                </div>
-            </div>
-
-
-             <div data-category="p31" class="product-card bg-white rounded-2xl border border-gray-200 shadow-sm overflow-hidden flex flex-col hover:shadow-md transition-all duration-300" data-aos="zoom-out-left">
-                <div class="relative h-56 bg-black">
-                    <img src="image/face2.jpeg " alt="Coque de téléphone personnalisée" class="w-full h-full object-cover">
-                    <span class="absolute top-4 left-4 bg-slate-800 text-white text-xs font-semibold px-3 py-1 rounded-full">
-                        Double Face
-                    </span>
-                </div>
-                <div class="p-6 flex flex-col flex-grow">
-                    <div class="flex justify-between items-start mb-2">
-                        <h3 class="text-xl font-bold text-slate-800">Tableau Double Face</h3>
-                        <span class="text-lg font-extrabold text-slate-800 whitespace-nowrap ml-2">9 000 FCFA</span>
-                    </div>
-                    <p class="text-gray-600 text-sm mb-6 flex-grow">
-                        Visuel rotatif recto-verso. Idéal pour présenter deux créations en une.
-                    </p>
-                    <a href="https://wa.me/221772484637?text=Bonjour%20BM%20COMPANY,%20je%20souhaite%20commander%20:%20Tableau%20Double%20Face%20(9%20000%20FCFA)" 
-                       target="_blank" 
-                       class="w-full inline-flex justify-center items-center py-3 px-5 text-sm font-semibold text-white rounded-lg bg-slate-800 hover:bg-slate-900 focus:ring-4 focus:ring-slate-300 transition-colors shadow-sm">
-                        <svg class="w-5 h-5 mr-2 fill-current" viewBox="0 0 24 24">
-                            <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/>
-                        </svg>
-                        Commander via WhatsApp
-                    </a>
-                </div>
-            </div>
-
-            <!-- Produit 6 : Pull Personnalisé -->
-            <div data-category="p5" class="product-card bg-white rounded-2xl border border-gray-200 shadow-sm overflow-hidden flex flex-col hover:shadow-md transition-all duration-300" data-aos="zoom-out-left">
-                <div class="relative h-56 bg-gray-100">
-                    <img src="MEDIAS/pull sn rose.jpeg" alt="Pull Personnalisé" class="w-full h-full object-cover">
-                    <span class="absolute top-4 left-4 bg-slate-800 text-white text-xs font-semibold px-3 py-1 rounded-full">
-                        Textile
-                    </span>
-                </div>
-                <div class="p-6 flex flex-col flex-grow">
-                    <div class="flex justify-between items-start mb-2">
-                        <h3 class="text-xl font-bold text-slate-800">Pull Personnalisé</h3>
-                        <span class="text-lg font-extrabold text-slate-800 whitespace-nowrap ml-2">12 000 FCFA</span>
-                    </div>
-                    <p class="text-gray-600 text-sm mb-6 flex-grow">
-                        Sweat-shirt/Pull imprimé ou brodé sur-mesure selon votre style.
-                    </p>
-                    <a href="https://wa.me/221772484637?text=Bonjour%20BM%20COMPANY,%20je%20souhaite%20commander%20:%20Pull%20Personnalis%C3%A9%20(12%20000%20FCFA)" 
-                       target="_blank" 
-                       class="w-full inline-flex justify-center items-center py-3 px-5 text-sm font-semibold text-white rounded-lg bg-slate-800 hover:bg-slate-900 focus:ring-4 focus:ring-slate-300 transition-colors shadow-sm">
-                        <svg class="w-5 h-5 mr-2 fill-current" viewBox="0 0 24 24">
-                            <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/>
-                        </svg>
-                        Commander via WhatsApp
-                    </a>
-                </div>
-            </div>
-
+        <div id="products-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Les produits seront injectés ici via JavaScript -->
         </div>
+
     </div>
 </section>
+
 <script>
-document.addEventListener('DOMContentLoaded', () => {
-    const filterButtons = document.querySelectorAll('.filter-btn');
-    const productCards = document.querySelectorAll('.product-card');
+const whatsappIcon = `
+    <svg class="w-5 h-5 mr-2 fill-current" viewBox="0 0 24 24">
+        <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/>
+    </svg>
+`;
 
-    filterButtons.forEach(button => {
-        button.addEventListener('click', (e) => {
-            e.preventDefault();
-            
-            const targetCategory = button.getAttribute('data-filter');
+let allProducts = [];
 
-            // 1. Mise à jour du style des boutons (Bouton actif en bg-slate-800)
-            filterButtons.forEach(btn => {
-                btn.classList.remove('bg-slate-800', 'text-white');
-                btn.classList.add('bg-white', 'text-slate-700');
-            });
-            button.classList.remove('bg-white', 'text-slate-700');
-            button.classList.add('bg-slate-800', 'text-white');
+// Charger le JSON et afficher les produits
+async function loadProducts() {
+    try {
+        const response = await fetch('produits.json');
+        allProducts = await response.json();
+        renderProducts(allProducts);
+    } catch (error) {
+        console.error('Erreur lors du chargement du fichier JSON:', error);
+    }
+}
 
-            // 2. Filtrage des cartes produits
-            productCards.forEach(card => {
-                const cardCategory = card.getAttribute('data-category');
+// Fonction d'affichage des cartes produits
+function renderProducts(products) {
+    const grid = document.getElementById('products-grid');
+    grid.innerHTML = products.map(product => {
+        const mediaTag = product.isVideo 
+            ? `<video autoplay muted loop class="w-full h-full object-cover"><source src="${product.image}" type="video/mp4"></video>`
+            : `<img src="${product.image}" alt="${product.title}" class="w-full h-full object-cover">`;
 
-                if (targetCategory === 'all' || cardCategory === targetCategory) {
-                    card.classList.remove('hidden');
-                } else {
-                    card.classList.add('hidden');
-                }
-            });
+        const waUrl = `https://wa.me/221772484637?text=${encodeURIComponent(product.waText)}`;
+
+        return `
+            <div data-category="${product.category}" class="product-card bg-white rounded-2xl border border-gray-200 shadow-sm overflow-hidden flex flex-col hover:shadow-md transition-all duration-300" >
+                <div class="relative h-60 ${product.isVideo ? 'bg-black' : 'bg-gray-100'}">
+                    ${mediaTag}
+                    <span class="absolute top-4 left-4 bg-slate-800 text-white text-xs font-semibold px-3 py-1 rounded-full">
+                        ${product.badge}
+                    </span>
+                </div>
+                <div class="p-6 flex flex-col flex-grow">
+                    <div class="flex justify-between items-start mb-2">
+                        <h3 class="text-xl font-bold text-slate-800">${product.title}</h3>
+                        <span class="text-lg font-extrabold text-slate-800 whitespace-nowrap ml-2">${product.price}</span>
+                    </div>
+                    <p class="text-gray-600 text-sm mb-6 flex-grow">
+                        ${product.description}
+                    </p>
+                    <a href="${waUrl}" 
+                       target="_blank" 
+                       class="w-full inline-flex justify-center items-center py-3 px-5 text-sm font-semibold text-white rounded-lg bg-slate-800 hover:bg-slate-900 focus:ring-4 focus:ring-slate-300 transition-colors shadow-sm">
+                        ${whatsappIcon}
+                        Commander via WhatsApp
+                    </a>
+                </div>
+            </div>
+        `;
+    }).join('');
+}
+
+// Gestion des filtres
+document.querySelectorAll('#filter-buttons .filter-btn').forEach(btn => {
+    btn.addEventListener('click', (e) => {
+        const filter = e.target.dataset.filter;
+
+        // Mettre à jour l'état visuel des boutons
+        document.querySelectorAll('#filter-buttons .filter-btn').forEach(b => {
+            b.classList.remove('bg-slate-800', 'text-white');
+            b.classList.add('bg-white', 'text-slate-700');
         });
+        e.target.classList.remove('bg-white', 'text-slate-700');
+        e.target.classList.add('bg-slate-800', 'text-white');
+
+        // Filtrer les données
+        if (filter === 'all') {
+            renderProducts(allProducts);
+        } else {
+            const filtered = allProducts.filter(p => p.category === filter);
+            renderProducts(filtered);
+        }
     });
 });
+
+// Initialisation au chargement de la page
+document.addEventListener('DOMContentLoaded', loadProducts);
 </script>
 
 
