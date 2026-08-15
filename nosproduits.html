@@ -426,7 +426,7 @@ function renderProducts(products) {
         const waUrl = `https://wa.me/221772484637?text=${encodeURIComponent(product.waText)}`;
 
         return `
-            <div data-category="${product.category}" class="product-card bg-white rounded-2xl border border-gray-200 shadow-sm overflow-hidden flex flex-col hover:shadow-md transition-all duration-300" data-aos="zoom-in">
+            <div data-category="${product.category}" class="product-card bg-white rounded-2xl border border-gray-200 shadow-sm overflow-hidden flex flex-col hover:shadow-md transition-all duration-300">
                 <div class="relative h-60 ${product.isVideo ? 'bg-black' : 'bg-gray-100'}">
                     ${mediaTag}
                     <span class="absolute top-4 left-4 bg-slate-800 text-white text-xs font-semibold px-3 py-1 rounded-full">
